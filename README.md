@@ -10,6 +10,9 @@ or
     yarn add npm install react-native-element-image
 ```
 
+#### Demo
+![](https://github.com/hoaphantn7604/file-upload/blob/master/document/image/demo.png)
+
 #### Props
 | Props              | Params               | isRequire | Description                   |
 | ------------------ | -------------------- | --------- | ------------------------------|

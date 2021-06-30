@@ -1,7 +1,7 @@
 {
   "name": "react-native-element-image",
   "title": "React Native Element Image",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React Native image width auto width or height computation",
   "main": "index.ts",
   "scripts": {
