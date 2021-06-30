@@ -1,4 +1,5 @@
-# react-native-element-image
+## react-native-element-image
+`react-native-element-image` Automatically calculate width or height based on input Image component for React Native.
 
 ## Getting started
 
@@ -53,7 +54,7 @@ or
     });
 ```
 
-### Suggested Package
+### Suggested Packages
 - [react-native-utils-scale](https://www.npmjs.com/package/react-native-utils-scale) for flexible UI on many different screen sizes.
 - [react-native-element-dropdown](https://www.npmjs.com/package/react-native-element-dropdown) A react-native dropdown component easy to customize for both iOS and Android.
 - [react-native-element-timer](https://www.npmjs.com/package/react-native-element-timer) React Native Timer Countdown.

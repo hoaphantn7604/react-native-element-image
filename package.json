@@ -1,8 +1,8 @@
 {
   "name": "react-native-element-image",
   "title": "React Native Element Image",
-  "version": "1.0.0",
-  "description": "React Native image width auto width or height computation",
+  "version": "1.0.1",
+  "description": "Automatically calculate width or height based on input Image component for React Native.",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
