@@ -1,12 +1,14 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {Image} from 'react-native-element-image';
 const img = require('./assets/default.png');
 
 const ImageScreen = _props => {
   return (
     <View style={styles.container}>
+      <Text>Width: 200, Height: Automatic</Text>
       <Image style={styles.image} source={img} width={200} />
+      <Text style={styles.text}>Width: Automatic, Height: 200</Text>
       <Image style={styles.image} source={img} height={200} />
     </View>
   );
@@ -23,4 +25,5 @@ const styles = StyleSheet.create({
   image: {
     margin: 20,
   },
+  text: {marginTop: 50},
 });
