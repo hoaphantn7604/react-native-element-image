@@ -17,9 +17,9 @@ or
 #### Props
 | Props              | Params               | isRequire | Description                   |
 | ------------------ | -------------------- | --------- | ------------------------------|
-| source             | ImageSourcePropType  | No        |                               |
-| width              | Number               | No        | Fixed width, automatic height |
-| height             | Number               | No        | Fixed height, automatic width |
+| source             | ImageSourcePropType  | Yes       |                               |
+| width              | Number               |           | Fixed width, automatic height |
+| height             | Number               |           | Fixed height, automatic width |
 | background         | Boolean              | No        | if true is Image Background   |
 | onSize             | (size) => void       | No        | get Image size                |
 
@@ -57,6 +57,7 @@ or
 ### Suggested Packages
 - [react-native-utils-scale](https://www.npmjs.com/package/react-native-utils-scale) for flexible UI on many different screen sizes.
 - [react-native-element-dropdown](https://www.npmjs.com/package/react-native-element-dropdown) A react-native dropdown component easy to customize for both iOS and Android.
+- [react-native-element-textinput](https://www.npmjs.com/package/react-native-element-textinput) A react-native TextInput component easy to customize for both iOS and Android.
 - [react-native-element-timer](https://www.npmjs.com/package/react-native-element-timer) React Native Timer Countdown.
 - [react-native-vertical-swipe-view](https://www.npmjs.com/package/react-native-vertical-swipe-view) React Native Vertical Swipe View.
 - [react-native-checkbox-tree](https://www.npmjs.com/package/react-native-checkbox-tree) A simple and elegant checkbox tree for React Native.
