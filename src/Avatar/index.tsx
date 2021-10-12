@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { View, TouchableWithoutFeedback } from 'react-native';
 import { AvatarProps } from './type';
 import { Image, Text } from 'react-native';
@@ -54,6 +54,13 @@ const AvatarComponent: AvatarProps = props => {
     return null;
   };
 
+  const uri = useMemo(()=>{
+    if(props.source){
+      return props.source;
+    }
+    return img_avatar;
+  },[props.source]);
+
   return (
     <View style={[styles.container, containerStyle]}>
       <View
@@ -68,7 +75,7 @@ const AvatarComponent: AvatarProps = props => {
         <Image
           {...props}
           style={{ width: size, height: size, borderRadius: size / 2 }}
-          source={img_avatar}
+          source={uri}
         />
         {_renderIcon()}
       </View>
