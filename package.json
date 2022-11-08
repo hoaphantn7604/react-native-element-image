@@ -1,6 +1,6 @@
 {
   "name": "react-native-element-image",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Automatically calculate width or height based on input Image component for React Native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
