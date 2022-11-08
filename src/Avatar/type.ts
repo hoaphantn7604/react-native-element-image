@@ -1,5 +1,5 @@
-import React from 'react';
-import { ImageProps, TextStyle, ViewStyle } from 'react-native';
+import type React from 'react';
+import type { ImageProps, TextStyle, ViewStyle } from 'react-native';
 
 interface Props extends ImageProps {
   containerStyle?: ViewStyle;

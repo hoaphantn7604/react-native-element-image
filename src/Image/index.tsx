@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Image, ImageBackground } from 'react-native';
-import { PropsImage } from './type';
+import type { PropsImage } from './type';
 
 const resolveAssetSource = Image.resolveAssetSource;
 
-const ImageAuto: PropsImage = props => {
-  const { style, onSize = (size) => { }, background } = props;
+const ImageAuto: PropsImage = (props) => {
+  const { style = {}, onSize = () => {}, background } = props;
   const [autoWidth, setAutoWidth] = useState<number | null>(null);
   const [autoHeight, setAutoHeight] = useState<number | null>(null);
   const mounted = useRef(false);
@@ -30,7 +30,7 @@ const ImageAuto: PropsImage = props => {
       Image.getSize(
         sourceToUse,
         (width, height) => adjustSize(width, height, props),
-        console.log,
+        console.log
       );
     } else {
       const sourceToUse = resolveAssetSource(source);
@@ -41,7 +41,7 @@ const ImageAuto: PropsImage = props => {
   const adjustSize = (
     sourceWidth: number,
     sourceHeight: number,
-    localProps: any,
+    localProps: any
   ) => {
     const { width, height } = localProps;
 
@@ -69,12 +69,19 @@ const ImageAuto: PropsImage = props => {
 
   if (autoWidth && autoHeight) {
     if (background) {
-      return <ImageBackground
+      return (
+        <ImageBackground
+          {...props}
+          style={[style, { width: autoWidth, height: autoHeight }]}
+        />
+      );
+    }
+    return (
+      <Image
         {...props}
         style={[style, { width: autoWidth, height: autoHeight }]}
-      />;
-    }
-    return <Image {...props} style={[style, { width: autoWidth, height: autoHeight }]} />
+      />
+    );
   }
   return null;
 };

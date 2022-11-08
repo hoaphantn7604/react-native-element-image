@@ -1,13 +1,14 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, { useMemo } from 'react';
 import { View, TouchableWithoutFeedback } from 'react-native';
-import { AvatarProps } from './type';
+import type { AvatarProps } from './type';
 import { Image, Text } from 'react-native';
 import { styles } from './styles';
 
 const img_avatar = require('./icons/ic-avatar.png');
 const img_camera = require('./icons/ic-camera.png');
 
-const AvatarComponent: AvatarProps = props => {
+const AvatarComponent: AvatarProps = (props) => {
   const {
     containerStyle = {},
     size = 100,
@@ -28,7 +29,8 @@ const AvatarComponent: AvatarProps = props => {
           <TouchableWithoutFeedback
             onPress={() => {
               onPressIcon && onPressIcon();
-            }}>
+            }}
+          >
             <View
               style={{
                 backgroundColor: 'white',
@@ -37,7 +39,8 @@ const AvatarComponent: AvatarProps = props => {
                 right: 5,
                 bottom: 5,
                 padding: 3,
-              }}>
+              }}
+            >
               <Image
                 style={{
                   width: size / 4.5,
@@ -54,12 +57,12 @@ const AvatarComponent: AvatarProps = props => {
     return null;
   };
 
-  const uri = useMemo(()=>{
-    if(props.source){
+  const uri = useMemo(() => {
+    if (props.source) {
       return props.source;
     }
     return img_avatar;
-  },[props.source]);
+  }, [props.source]);
 
   return (
     <View style={[styles.container, containerStyle]}>
@@ -71,7 +74,8 @@ const AvatarComponent: AvatarProps = props => {
           backgroundColor: borderColor,
           justifyContent: 'center',
           alignItems: 'center',
-        }}>
+        }}
+      >
         <Image
           {...props}
           style={{ width: size, height: size, borderRadius: size / 2 }}
